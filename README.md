@@ -7,7 +7,32 @@ DeskGuard is a lightweight, interactive dashboard application designed for unive
 
 ## 🚀 Live Link
 View the working web application here: 
-👉 **[https://astonishing-dragon-2ab67d.netlify.app/]**
+👉 **[INSERT YOUR VERCEL OR NETLIFY DEPLOYMENT LINK HERE]**
+
+---
+
+## 🛠️ How to Run Locally
+
+Since DeskGuard is built using native web technologies, it runs directly in any modern browser without needing complex build steps or dependencies.
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com[YOUR_GITHUB_USERNAME]/deskguard.git
+cd deskguard
+```
+
+### Step 2: Launch the App
+* **Method A (Easiest):** Double-click the `index.html` file in your project folder to open it instantly in your preferred web browser.
+* **Method B (Recommended):** If you are using VS Code, right-click `index.html` and select **"Open with Live Server"** to view it on a local development server (typically at `http://127.0.0.1:5500`).
+
+---
+
+## ⚙️ Environment Variables
+
+This project is built as a pure client-side static application using vanilla frontend languages. 
+
+* **Required Variables:** `None`
+* **Configuration:** No external `.env` file or API keys are required to run the current production-ready prototype. Mock data logic for desk timers and status swapping is handled natively inside the core JavaScript bundle.
 
 ---
 
