@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeskGuard Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Smooth Non-Blocking Toast Alert System -->
+    <div id="toast-notification" class="hidden">
+        <span id="toast-icon">🛡️</span>
+        <span id="toast-message">System Alert Message</span>
+    </div>
+
+    <!-- Premium Activity Verification Prompt Overlay Modal -->
+    <div id="prompt-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <div class="modal-icon">⚠️</div>
+            <h2>Presence Check</h2>
+            <p>Your 2-hour session verification prompt is due. Please confirm you are still at this workstation.</p>
+            <div class="modal-timer">Releasing desk in <span id="modal-countdown">5</span>s</div>
+            <button id="btn-confirm-presence" class="btn btn-success">Yes, Confirm My Presence</button>
+        </div>
+    </div>
+
+    <!-- Main Workspace Dashboard Wrapper Container -->
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="logo-shield">🛡️</span>
+                <div>
+                    <h1>DeskGuard</h1>
+                    <p>Real-Time Smart Library Floor Plan Tracker</p>
+                </div>
+            </div>
+            
+            <!-- Real-Time Interactive Analytics KPI Metrics for Judges -->
+            <div class="kpi-ribbon">
+                <div class="kpi-card"><span id="kpi-total">4</span> <label>Total Desks</label></div>
+                <div class="kpi-card"><span id="kpi-available" class="txt-success">2</span> <label>Available</label></div>
+                <div class="kpi-card"><span id="kpi-hoarded" class="txt-danger">3</span> <label>Auto-Freed</label></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Floor Plan Layout Graphic Section -->
+            <section class="card map-section">
+                <div class="card-header">
+                    <h2>Interactive Map Floor Plan</h2>
+                    <div class="legend">
+                        <span class="legend-item"><span class="dot free"></span> Free</span>
+                        <span class="legend-item"><span class="dot occupied"></span> Occupied</span>
+                        <span class="legend-item"><span class="dot away"></span> Away</span>
+                    </div>
+                </div>
+                
+                <div class="map-wrapper">
+                    <svg viewBox="0 0 500 350" id="library-map">
+                        <rect x="10" y="10" width="480" height="330" rx="16" fill="var(--bg-card)" stroke="var(--border-color)" stroke-width="2"/>
+                        <text x="30" y="45" class="map-zone-title">Quiet Core Zone A</text>
+
+                        <!-- Interactive SVG Workstation Node Containers -->
+                        <g class="desk" data-id="101">
+                            <rect x="50" y="140" width="80" height="55" rx="8" />
+                            <text x="90" y="173">Desk 101</text>
+                        </g>
+
+                        <g class="desk" data-id="102">
+                            <rect x="155" y="140" width="80" height="55" rx="8" />
+                            <text x="195" y="173">Desk 102</text>
+                        </g>
+
+                        <g class="desk" data-id="103">
+                            <rect x="260" y="140" width="80" height="55" rx="8" />
+                            <text x="300" y="173">Desk 103</text>
+                        </g>
+
+                        <g class="desk" data-id="104">
+                            <rect x="365" y="140" width="80" height="55" rx="8" />
+                            <text x="405" y="173">Desk 104</text>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- Workspace Action Logic Station Controller Section -->
+            <section class="card control-panel">
+                <div class="control-main-stack">
+                    <h2>Station Controller</h2>
+                    
+                    <div id="no-selection" class="empty-state">
+                        <div class="empty-icon">📍</div>
+                        <p>Select any workstation box on the floor plan map to toggle state actions or scan simulated QR checks.</p>
+                    </div>
+
+                    <div id="active-panel" class="control-interface hidden">
+                        
+                            <h3 id="panel-desk-title">Workstation #101</h3>
+                            <div class="status-badge" id="panel-status">FREE</div>
+                        </div>
+                        
+                        <!-- Dynamic Progress Countdown Interface System Component -->
+                        <div id="timer-container" class="timer-box hidden">
+                            <div class="timer-flex">
+                                <span class="timer-label">Away Token Countdown Timer</span>
+                                <div id="countdown-clock">00:20</div>
+                            </div>
+                            <div class="progress-bar-track"><div id="timer-progress" class="progress-bar-fill"></div></div>
+                        </div>
+
+                        <div class="actions-grid">
+                            <button id="btn-checkin" class="btn btn-success btn-large">⚡ Quick Check-In (QR)</button>
+                            <button id="btn-away" class="btn btn-warning hidden">☕ Step Away (20m)</button>
+                            <button id="btn-return" class="btn btn-primary hidden">🔄 Return to Desk</button>
+                            <button id="btn-checkout" class="btn btn-danger hidden">🚪 End Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Librarian Administrative Fast-Forward Override Panel -->
+                <div class="admin-override-section">
+                    <h4>Librarian Override Tools</h4>
+                    <button id="btn-admin-clear" class="btn btn-admin">🧹 Force Clear Selection</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
