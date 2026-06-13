@@ -7,7 +7,7 @@ DeskGuard is a lightweight, interactive dashboard application designed for unive
 
 ## 🚀 Live Link
 View the working web application here: 
-👉 **[INSERT YOUR VERCEL OR NETLIFY DEPLOYMENT LINK HERE]**
+👉 **[https://astonishing-dragon-2ab67d.netlify.app/]**
 
 ---
 
