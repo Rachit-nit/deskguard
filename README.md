@@ -7,7 +7,7 @@ DeskGuard is a lightweight, interactive dashboard application designed for unive
 
 ## 🚀 Live Link
 View the working web application here: 
-👉 **[INSERT YOUR VERCEL OR NETLIFY DEPLOYMENT LINK HERE]**
+👉 **[https://astonishing-dragon-2ab67d.netlify.app/]**
 
 ---
 
@@ -17,7 +17,7 @@ Since DeskGuard is built using native web technologies, it runs directly in any 
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com[YOUR_GITHUB_USERNAME]/deskguard.git
+git clone https://github.com/Rachit-nit/deskguard.git
 cd deskguard
 ```
 
